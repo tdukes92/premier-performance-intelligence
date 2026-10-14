@@ -1,0 +1,24 @@
+# Streamlit configuration for Premier Performance Intelligence.
+# Docs: https://docs.streamlit.io/develop/api-reference/configuration/config.toml
+
+[server]
+# Only listen on this computer. Nothing is exposed to your network or the internet.
+address = "localhost"
+port = 8501
+headless = false
+maxUploadSize = 200
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "dark"
+primaryColor = "#3987e5"
+backgroundColor = "#0a0e14"
+secondaryBackgroundColor = "#111722"
+textColor = "#e8ecf2"
+font = "sans serif"

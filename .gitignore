@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+# Real shop data imported through the app stays on your machine only.
+data/imported/*
+!data/imported/.gitkeep
