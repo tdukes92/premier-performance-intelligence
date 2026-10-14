@@ -4,7 +4,8 @@ A private business intelligence dashboard for an independent automotive repair s
 productivity, advisor performance and operations in one place. Built with Python, Streamlit and Plotly.
 
 It ships with **fictional sample data** (a believable shop, about 13 months of history, with problems planted on purpose)
-so every report works right away. When you're ready, import CSV exports from Tekmetric on the **Data Import** page.
+so every report works right away. Once you import, the financial pages use your data. The Reputation & Reviews
+page stays on fictional sample reviews until review platforms are connected. When you're ready, import CSV exports from Tekmetric on the **Data Import** page.
 
 > **Private by design.** The app runs only on your computer (`localhost`). Nothing is published, and imported shop
 > data stays in `data/imported/`, which Git ignores.
@@ -52,6 +53,7 @@ they don't clash with anything else on your computer. "Activating" it just tells
 | **Service Advisors** | ARO, close rate, hours per RO, discounting, parts leakage and gross profit for each advisor. |
 | **RO Profitability** | GP % distribution, RO size vs. margin, profit by job type and per billed hour, a low-profit RO review list, and an RO inspector with a profit waterfall. |
 | **Operational Insights** | Arrival heatmap, cycle time, aging work-in-progress, declined-work follow-up list, comebacks, and vehicle make and age mix. |
+| **Reputation & Reviews** | Google, Yelp, Facebook and RepairPal reviews in one place: star ratings per platform, review volume over time, response status, negative-review alerts, a generated executive summary of the top complaints and compliments, and a filterable review feed. *(Fictional sample reviews for now.)* |
 | **Data Import** | Upload CSVs, match columns automatically, validate, preview and save. You can also download templates. |
 
 Every page has a **📘 explainer** at the bottom that defines its metrics in plain English. The sidebar filters
@@ -82,6 +84,7 @@ ppi/data.py            Loading, cleaning, filtering
 ppi/metrics.py         KPI and scorecard calculations
 ppi/pricing.py         Parts matrix and margin-leakage logic
 ppi/importer.py        CSV mapping and validation
+ppi/reviews.py         Review data model, sample reviews, theme detection rules
 .streamlit/config.toml Dark theme; server bound to localhost only
 data/imported/         Your imported CSVs (git-ignored, never committed)
 ```

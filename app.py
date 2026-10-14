@@ -31,6 +31,9 @@ pages = {
         st.Page("views/ros.py", title="RO Profitability", icon=":material/receipt_long:"),
         st.Page("views/operations.py", title="Operational Insights", icon=":material/insights:"),
     ],
+    "Customer": [
+        st.Page("views/reviews.py", title="Reputation & Reviews", icon=":material/reviews:"),
+    ],
     "Data": [
         st.Page("views/data_import.py", title="Data Import", icon=":material/upload_file:"),
     ],

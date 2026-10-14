@@ -35,6 +35,9 @@ WARNING = "#fab219"
 SERIOUS = "#ec835a"
 CRITICAL = "#d03b3b"
 
+# Star ratings (conventional gold, kept distinct from the status palette)
+STAR = "#f2c14e"
+
 FONT = "Inter, system-ui, -apple-system, 'Segoe UI', sans-serif"
 
 
@@ -156,6 +159,27 @@ h1, h2, h3, h4 {{ color: {TEXT}; letter-spacing: -0.01em; }}
 
 /* Buttons */
 .stDownloadButton button, .stButton button {{ border-radius: 8px; font-weight: 600; }}
+/* Reviews */
+.ppi-plat {{ background: {SURFACE}; border: 1px solid {BORDER}; border-radius: 14px; padding: 14px 16px; height: 100%; }}
+.ppi-plat .name {{ font-size: 0.8rem; font-weight: 600; color: {TEXT_2}; display: flex; align-items: center; gap: 8px; }}
+.ppi-plat .dot {{ width: 9px; height: 9px; border-radius: 50%; display: inline-block; }}
+.ppi-plat .big {{ font-size: 1.75rem; font-weight: 700; color: {TEXT}; margin-top: 6px; line-height: 1.1; }}
+.ppi-plat .meta {{ font-size: 0.78rem; color: {MUTED}; margin-top: 6px; }}
+.ppi-stars {{ color: {STAR}; letter-spacing: 1px; font-size: 0.95rem; }}
+.ppi-stars .off {{ color: #3a4252; }}
+.ppi-review {{ background: {SURFACE_2}; border: 1px solid {BORDER}; border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; }}
+.ppi-review.neg {{ border-left: 3px solid {CRITICAL}; }}
+.ppi-review .head {{ display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: center; }}
+.ppi-review .who {{ color: {TEXT}; font-weight: 600; font-size: 0.88rem; }}
+.ppi-review .when {{ color: {MUTED}; font-size: 0.78rem; }}
+.ppi-review .text {{ color: {TEXT_2}; font-size: 0.86rem; margin: 6px 0 8px 0; line-height: 1.45; }}
+.ppi-review .reply {{ color: {MUTED}; font-size: 0.8rem; border-left: 2px solid {BASELINE}; padding-left: 10px; margin-top: 6px; }}
+.ppi-chip {{ display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin: 2px 4px 2px 0;
+  background: rgba(255,255,255,0.05); color: {TEXT_2}; border: 1px solid {BORDER}; }}
+.ppi-chip.pos {{ color: #4cc38a; border-color: rgba(25,158,112,0.4); }}
+.ppi-chip.neg {{ color: #f08a8a; border-color: rgba(208,59,59,0.45); }}
+.ppi-summary p {{ color: {TEXT_2}; font-size: 0.9rem; line-height: 1.55; margin: 0 0 10px 0; }}
+.ppi-summary b {{ color: {TEXT}; }}
 </style>
 """
 
